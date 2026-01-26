@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumit Shrivas - Portfolio</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">SS</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="abstract-avatar">
+                    <div class="circle"></div>
+                    <div class="square"></div>
+                    <div class="triangle"></div>
+                </div>
+                <h1 class="hero-title">Hi, I'm <span class="highlight">Sumit Shrivas</span></h1>
+                <p class="hero-subtitle">Open to opportunities in the Data Analyst job market</p>
+                <div class="hero-icons">
+                    <i class="fas fa-chart-line"></i>
+                    <i class="fas fa-database"></i>
+                    <i class="fas fa-code"></i>
+                </div>
+                <a href="#contact" class="cta-button">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a B.Tech Computer Science graduate passionate about data analysis and problem solving.</p>
+                    <h3>Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <h4>Python</h4>
+                            <p>NumPy, Pandas, Matplotlib</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <h4>SQL</h4>
+                            <p>Database Management</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-bar"></i>
+                            <h4>Data Analysis</h4>
+                            <p>Insights & Visualization</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Work Experience</h2>
+                <button class="add-experience-btn" onclick="redirectToLogin('addExperience')">
+                    <i class="fas fa-plus"></i> Add Experience
+                </button>
+            </div>
+            <div class="experience-grid" id="experienceGrid">
+                <!-- Experience cards will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Projects</h2>
+                <button class="add-project-btn" onclick="redirectToLogin('add')">
+                    <i class="fas fa-plus"></i> Add Project
+                </button>
+            </div>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>example@gmail.com</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Sumit Shrivas. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+            <div class="modal-actions">
+                <button class="edit-btn" onclick="editProjectFromModal()">
+                    <i class="fas fa-edit"></i> Edit
+                </button>
+                <button class="delete-btn" onclick="deleteProjectFromModal()">
+                    <i class="fas fa-trash"></i> Delete
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Experience Modal -->
+    <div id="experienceModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeExperienceModal()">&times;</span>
+            <h2 id="expModalCompany"></h2>
+            <h3 id="expModalRole"></h3>
+            <p id="expModalDuration"></p>
+            <p id="expModalDescription"></p>
+            <div class="modal-actions">
+                <button class="edit-btn" onclick="editExperienceFromModal()">
+                    <i class="fas fa-edit"></i> Edit
+                </button>
+                <button class="delete-btn" onclick="deleteExperienceFromModal()">
+                    <i class="fas fa-trash"></i> Delete
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
