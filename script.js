@@ -1,8 +1,3 @@
-/* ========================================
-   STATIC PORTFOLIO - NO CRUD FUNCTIONALITY
-   Simple JavaScript for mobile menu and form handling
-   ======================================== */
-
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     setupMobileMenu();
