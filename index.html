@@ -20,8 +20,8 @@
             <div class="logo">SS</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -35,6 +35,9 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <!-- Background overlay -->
+        <div class="hero-overlay"></div>
+        
         <div class="container">
             <div class="hero-content">
                 <div class="abstract-avatar">
@@ -52,33 +55,28 @@
                 <a href="#contact" class="cta-button">Get In Touch</a>
             </div>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I am a B.Tech Computer Science graduate passionate about data analysis and problem solving.</p>
-                    <h3>Skills</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <i class="fab fa-python"></i>
-                            <h4>Python</h4>
-                            <p>NumPy, Pandas, Matplotlib</p>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-database"></i>
-                            <h4>SQL</h4>
-                            <p>Database Management</p>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-chart-bar"></i>
-                            <h4>Data Analysis</h4>
-                            <p>Insights & Visualization</p>
-                        </div>
-                    </div>
+        
+        <!-- Marquee Section -->
+        <!-- <div class="marquee-container">
+            <div class="marquee">
+                <div class="marquee-content">
+                    <span><i class="fab fa-python"></i> Python</span>
+                    <span><i class="fas fa-database"></i> SQL</span>
+                    <span><i class="fas fa-chart-line"></i> Data Analysis</span>
+                    <span><i class="fab fa-git-alt"></i> Git</span>
+                    <span><i class="fas fa-table"></i> Excel</span>
+                    <span><i class="fas fa-code"></i> Pandas</span>
+                    <span><i class="fas fa-chart-bar"></i> Matplotlib</span>
+                    <span><i class="fas fa-brain"></i> Machine Learning</span> -->
+                    <!-- Duplicate for seamless loop -->
+                    <!-- <span><i class="fab fa-python"></i> Python</span>
+                    <span><i class="fas fa-database"></i> SQL</span>
+                    <span><i class="fas fa-chart-line"></i> Data Analysis</span>
+                    <span><i class="fab fa-git-alt"></i> Git</span>
+                    <span><i class="fas fa-table"></i> Excel</span>
+                    <span><i class="fas fa-code"></i> Pandas</span>
+                    <span><i class="fas fa-chart-bar"></i> Matplotlib</span>
+                    <span><i class="fas fa-brain"></i> Machine Learning</span> -->
                 </div>
             </div>
         </div>
@@ -87,14 +85,106 @@
     <!-- Work Experience Section -->
     <section id="experience" class="experience">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Work Experience</h2>
-                <button class="add-experience-btn" onclick="redirectToLogin('addExperience')">
-                    <i class="fas fa-plus"></i> Add Experience
-                </button>
+            <h2 class="section-title">Work Experience</h2>
+            <div class="experience-grid">
+                
+                <div class="experience-card">
+                    <div class="company-name">Tech Solutions Inc.</div>
+                    <div class="role">Data Analyst Intern</div>
+                    <div class="duration"><i class="fas fa-calendar-alt"></i> June 2023 - December 2023</div>
+                    <div class="description">
+                        Worked on data cleaning, analysis, and visualization projects. Collaborated with senior analysts to build automated reporting systems using Python and SQL...
+                    </div>
+                    <div class="full-description" style="display: none;">
+                        Worked on data cleaning, analysis, and visualization projects. Collaborated with senior analysts to build automated reporting systems using Python and SQL. Developed interactive dashboards for business stakeholders. Created ETL pipelines to process large datasets efficiently. Implemented data quality checks and validation procedures. Presented insights to management team on weekly basis.
+                    </div>
+                    <button class="view-more-btn" onclick="toggleDescription(this)">
+                        View More <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+
+                <div class="experience-card">
+                    <div class="company-name">Analytics Corp</div>
+                    <div class="role">Junior Data Analyst</div>
+                    <div class="duration"><i class="fas fa-calendar-alt"></i> January 2023 - May 2023</div>
+                    <div class="description">
+                        Analyzed customer behavior data and created dashboards for business stakeholders. Implemented data quality checks and optimized database queries...
+                    </div>
+                    <div class="full-description" style="display: none;">
+                        Analyzed customer behavior data and created dashboards for business stakeholders. Implemented data quality checks and optimized database queries for better performance. Contributed to machine learning model development for customer churn prediction. Worked with cross-functional teams to understand business requirements. Created automated reports using Python and Tableau. Reduced query execution time by 40% through optimization.
+                    </div>
+                    <button class="view-more-btn" onclick="toggleDescription(this)">
+                        View More <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+
+                <div class="experience-card">
+                    <div class="company-name">Data Insights Ltd</div>
+                    <div class="role">Research Assistant</div>
+                    <div class="duration"><i class="fas fa-calendar-alt"></i> July 2022 - December 2022</div>
+                    <div class="description">
+                        Conducted statistical analysis on large datasets. Assisted in developing predictive models using Python. Created comprehensive reports...
+                    </div>
+                    <div class="full-description" style="display: none;">
+                        Conducted statistical analysis on large datasets. Assisted in developing predictive models using Python. Created comprehensive reports and presentations for research findings. Performed data collection and validation for multiple research projects. Collaborated with research team to analyze trends and patterns. Published findings in internal research journals. Maintained detailed documentation of methodologies and results.
+                    </div>
+                    <button class="view-more-btn" onclick="toggleDescription(this)">
+                        View More <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+
             </div>
-            <div class="experience-grid" id="experienceGrid">
-                <!-- Experience cards will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a B.Tech Computer Science graduate passionate about data analysis and problem solving. With expertise in statistical analysis, machine learning, and data visualization, I transform complex datasets into actionable insights.</p>
+                    <h3>Skills</h3>
+                    <div class="skills-grid">
+                        
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <h4>Python</h4>
+                            <p>NumPy, Pandas, Matplotlib</p>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <h4>SQL</h4>
+                            <p>Database Management</p>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-chart-bar"></i>
+                            <h4>Data Analysis</h4>
+                            <p>Insights & Visualization</p>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-brain"></i>
+                            <h4>Machine Learning</h4>
+                            <p>Predictive Modeling</p>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-table"></i>
+                            <h4>Excel</h4>
+                            <p>Advanced Analytics</p>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <h4>Git</h4>
+                            <p>Version Control</p>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -102,14 +192,69 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Projects</h2>
-                <button class="add-project-btn" onclick="redirectToLogin('add')">
-                    <i class="fas fa-plus"></i> Add Project
-                </button>
-            </div>
-            <div class="projects-grid" id="projectsGrid">
-                <!-- Projects will be dynamically loaded here -->
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <h3>SQL Practice – Music Store Database</h3>
+                    <p>Built a collection of real-world SQL queries using the Chinook (Music Store) database. Implemented complex joins, filtering, aggregation, and ranking queries to extract meaningful insights and demonstrate strong database querying skills.</p>
+                    <div class="project-actions">
+                        <a href="https://github.com/sumitshrivas/SQL-Practise-" target="_blank" class="github-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- <div class="project-card">
+                    <h3>Customer Segmentation</h3>
+                    <p>Performed customer segmentation using SQL queries and Python clustering algorithms. Identified distinct customer groups and their purchasing behaviors to optimize marketing strategies.</p>
+                    <div class="project-actions">
+                        <a href="https://github.com/your-username/customer-segmentation" target="_blank" class="github-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div> -->
+
+                <!-- <div class="project-card">
+                    <h3>Dashboard Development</h3>
+                    <p>Built interactive dashboards using Matplotlib and SQL. Created real-time reporting tools for business metrics, enabling data-driven decision making across departments.</p>
+                    <div class="project-actions">
+                        <a href="https://github.com/your-username/dashboard-project" target="_blank" class="github-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div> -->
+
+                <!-- <div class="project-card">
+                    <h3>Sentiment Analysis Tool</h3>
+                    <p>Developed a natural language processing tool to analyze customer reviews and social media sentiment. Used Python libraries including NLTK and scikit-learn to classify text data.</p>
+                    <div class="project-actions">
+                        <a href="https://github.com/your-username/sentiment-analysis" target="_blank" class="github-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div> -->
+
+                <!-- <div class="project-card">
+                    <h3>Stock Price Predictor</h3>
+                    <p>Built a machine learning model to predict stock prices using historical data. Implemented LSTM neural networks and achieved 85% accuracy in price trend predictions.</p>
+                    <div class="project-actions">
+                        <a href="https://github.com/your-username/stock-predictor" target="_blank" class="github-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div> -->
+
+                <!-- <div class="project-card">
+                    <h3>E-commerce Analytics</h3>
+                    <p>Analyzed e-commerce transaction data to identify purchasing patterns and optimize inventory management. Created automated reports and data pipelines using Python and SQL.</p>
+                    <div class="project-actions">
+                        <a href="https://github.com/your-username/ecommerce-analytics" target="_blank" class="github-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div> -->
+
             </div>
         </div>
     </section>
@@ -122,18 +267,35 @@
                 <div class="contact-info">
                     <div class="info-item">
                         <i class="fas fa-envelope"></i>
-                        <p>example@gmail.com</p>
+                        <p>sumitshrivas8964@gmail.com</p>
+                    </div>
+                    <!-- <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+91 9</p>
+                    </div> -->
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Indore, Madhya Pradesh, India</p>
                     </div>
                     <div class="social-links">
-                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/sumit-shrivas-a41690337/" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/sumitshrivas" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" target="_blank" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
                     </div>
                 </div>
                 <form class="contact-form" id="contactForm">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                     <button type="submit">Send Message</button>
                 </form>
             </div>
@@ -143,45 +305,9 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Sumit Shrivas. All rights reserved.</p>
+            <p>&copy; 2026 Sumit Shrivas. All rights reserved.</p>
         </div>
     </footer>
-
-    <!-- Project Modal -->
-    <div id="projectModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2 id="modalTitle"></h2>
-            <p id="modalDescription"></p>
-            <div class="modal-actions">
-                <button class="edit-btn" onclick="editProjectFromModal()">
-                    <i class="fas fa-edit"></i> Edit
-                </button>
-                <button class="delete-btn" onclick="deleteProjectFromModal()">
-                    <i class="fas fa-trash"></i> Delete
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Experience Modal -->
-    <div id="experienceModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeExperienceModal()">&times;</span>
-            <h2 id="expModalCompany"></h2>
-            <h3 id="expModalRole"></h3>
-            <p id="expModalDuration"></p>
-            <p id="expModalDescription"></p>
-            <div class="modal-actions">
-                <button class="edit-btn" onclick="editExperienceFromModal()">
-                    <i class="fas fa-edit"></i> Edit
-                </button>
-                <button class="delete-btn" onclick="deleteExperienceFromModal()">
-                    <i class="fas fa-trash"></i> Delete
-                </button>
-            </div>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>
